@@ -7,7 +7,7 @@
 // * Accepts two parameters, a user's first name and last name
 // * Returns a user objects
 
-function createUser(firstName, lastName){
+function createUser(firstName, lastName) {
     let fullName = {
         firstName: firstName,
         lastName: lastName
@@ -22,8 +22,8 @@ function createUser(firstName, lastName){
 // * Adds a new `age` field to the user
 // * Returns the user object
 
-function setAge(user, age){
-    user.age = age    
+function setAge(user, age) {
+    user.age = age
     return user;
 }
 
@@ -33,7 +33,7 @@ function setAge(user, age){
 // * Increments the age field by one
 // * Returns the user object
 
-function incrementAge(user){
+function incrementAge(user) {
     user.age++
     return user;
 }
@@ -46,7 +46,7 @@ function incrementAge(user){
 // * Sets the `needsMaitenance` field to `false`
 // * Returns the car object
 
-function fixCar(car){
+function fixCar(car) {
     car.needsMaintenance = false;
     return car;
 }
@@ -59,7 +59,7 @@ function fixCar(car){
 // * Adds each new grade to the student's `grades` array
 // * Returns the student object
 
-function addGrades(student, newGrades){
+function addGrades(student, newGrades) {
     student.grades = student.grades.concat(newGrades)
     return student;
 }
@@ -72,7 +72,7 @@ function addGrades(student, newGrades){
 // * Accepts two parameters, an object and a key in that object
 // * Returns the data type of the value at that key in the object
 
-function getDataType(object, key){
+function getDataType(object, key) {
     return typeof object[key]
 }
 
@@ -83,7 +83,7 @@ function getDataType(object, key){
 // * Adds the new-todo item to the array
 // * Returns the array of to-do items
 
-function addTodo(todos, newTodo){
+function addTodo(todos, newTodo) {
     todos.push(newTodo)
     return todos;
 }
@@ -97,7 +97,7 @@ function addTodo(todos, newTodo){
 // * Adds the song to the playlist's `songs`
 // * Returns the playlist object
 
-function addSong(playlist, newSong){
+function addSong(playlist, newSong) {
     playlist.duration += newSong.duration
     playlist.songs.push(newSong)
     return playlist;
@@ -110,17 +110,17 @@ function addSong(playlist, newSong){
 // * Updates the report card's lowest grade, highest grade, and average grade
 // * Adds the new grade to the report card's grades
 
-function updateReportCard(reportCard, newGrade){
-        reportCard.grades.push(newGrade)
-        reportCard.lowestGrade = Math.min(...reportCard.grades)
-        reportCard.highestGrade = Math.max(...reportCard.grades)
+function updateReportCard(reportCard, newGrade) {
+    reportCard.grades.push(newGrade)
+    reportCard.lowestGrade = Math.min(...reportCard.grades)
+    reportCard.highestGrade = Math.max(...reportCard.grades)
 
     //update average grade
-        let sum = 0;
-        for (let i = 0; i < reportCard.grades.length; i++){
+    let sum = 0;
+    for (let i = 0; i < reportCard.grades.length; i++) {
         //for (let grade of reportCard.grades){
-            sum += reportCard.grades[i];
-        }
+        sum += reportCard.grades[i];
+    }
     reportCard.averageGrade = sum / reportCard.grades.length;
 
     return reportCard;
